@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="css/site2.css">
+<!DOCTYPE html>
+<a href="javascirpt:void" id="menu-item" onclick="onBtnClickHandle()">Home</a>
+<a class="tinysubtitle"><span id="clickable" class="tinysubtitleLink">Home</span> > Visual Archive</a>
+<a class="pagetitle">Visual Archives</a>
+<div id="menu-background-image"></div>
+<div class="randomLineLonger"></div>
+<div class="archiveParent" id="pageCards">
+        <div class="card">
+            <a class="subsubtitle">2017 & Original Vision</a>
+            <a class="tinysubtitle">All present data versions 2.4.3 - 2.4.5</a>
+        </div>
+        <div class="card">
+            <a class="subsubtitle">2018</a>
+            <a class="tinysubtitle">All present data versions 2.4.5 - 2.4.7</a>
+        </div>
+        <div class="card">
+            <a class="subsubtitle">2019</a>
+            <a class="tinysubtitle">All present data versions 2.4.7 - 2.4.10</a>
+        </div>
+</div>
+<div class="archiveParent" id="pageCards">
+    <div class="card">
+        <a class="subsubtitle">2020</a>
+        <a class="tinysubtitle">All present data versions 2.4.11.1 - 2.4.11.9</a>
+    </div>
+    <div class="card">
+        <a class="subsubtitle">2021</a>
+        <a class="tinysubtitle">All present data versions 2.4.11.10 - 2.4.11.18</a>
+    </div>
+</div>
+<script>
+    let clickableText = document.querySelector("#clickable");
+
+    clickableText.addEventListener("click", function () {
+
+        onBtnClickHandle();
+
+    });
+    var r = document.querySelector(':root');
+    r.style.setProperty('--g1', 'rgb(171 73 73)');
+    function onBtnClickHandle() {
+        document.getElementById("menu-background-image").style.backgroundPositionX = "110vw";
+        document.getElementById("menu-item").style.marginLeft = "110vw";
+        document.getElementsByClassName("pagetitle")[0].style.marginLeft = "110vw";
+        document.getElementsByClassName("RandomLineLonger")[0].style.marginLeft = "110vw";
+        document.getElementsByClassName("tinysubtitle")[0].style.marginLeft = "110vw";
+        document.getElementsByClassName("archiveParent")[0].style.marginLeft = "110vw";
+        setTimeout(function () { window.location = "Index.html" }, 800);
+    }
+
+    function linkFirearms() {
+        document.getElementsByClassName("card")[0].style.top = "-150%";
+        setTimeout(function () { window.location = "Visual/2017.html" }, 800);
+    }
+    function linkMelee() {
+        document.getElementsByClassName("card")[1].style.top = "-150%";
+        setTimeout(function () { window.location = "Visual/2018.html" }, 800);
+    }
+    function linkMedical() {
+        document.getElementsByClassName("card")[2].style.top = "-150%";
+        setTimeout(function () { window.location = "Visual/2019.html" }, 800);
+    }
+    function linkAmmo() {
+        document.getElementsByClassName("card")[3].style.top = "-150%";
+        setTimeout(function () { window.location = "Visual/2020.html" }, 800);
+    }
+    function linkBuildings() {
+        document.getElementsByClassName("card")[4].style.top = "-150%";
+        setTimeout(function () { window.location = "Visual/2021.html" }, 800);
+    }
+    document.getElementsByClassName("card")[0].addEventListener("click", linkFirearms, false);
+
+    document.getElementsByClassName("card")[1].addEventListener("click", linkMelee, false);
+
+    document.getElementsByClassName("card")[2].addEventListener("click", linkMedical, false);
+
+    document.getElementsByClassName("card")[3].addEventListener("click", linkAmmo, false);
+
+    document.getElementsByClassName("card")[4].addEventListener("click", linkBuildings, false);
+</script>

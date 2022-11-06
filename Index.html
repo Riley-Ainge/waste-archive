@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="css/site2.css">
+<!DOCTYPE html>
+<a class="title">Waste Archives</a>
+<div class="sidebarparent">
+    <a class="sidebar" href="Visual.html">Visual Updates</a>
+    <a class="sidebar" href="Models.html">Model Archive</a>
+    <a class="sidebar">Gameplay Data</a>
+</div>
+<div id="menu-background-image"></div>
+<div id="topImage"></div>
+
+<div class="randomLineLonger"></div>
+
+<a id="downArrow" href="#topCards">v</a>
+<div class="randomLine"></div>
+<div class="archiveParent" id="topCards">
+        <div class="card">
+            <a class="subsubtitle">Visual Updates</a>
+            <a class="tinysubtitle">All archieved in-engine progress images from 2017-2021</a>
+        </div>
+        <div class="card">
+            <a class="subsubtitle">Model Archive</a>
+            <a class="tinysubtitle">Archive of all present assets<br> and animations</a>
+        </div>
+        <div class="card">
+            <a class="subsubtitle">Gameplay Data</a>
+            <a class="tinysubtitle">All present gameplay data<br>as of version 2.4.11.18</a>
+        </div>
+</div>
+<script>
+    function linkVisual() {
+        document.getElementsByClassName("card")[0].style.top = "-150%";
+        setTimeout(function () { window.location = "Visual.html" }, 800);
+    }
+    function linkModels() {
+        document.getElementsByClassName("card")[1].style.top = "-150%";
+        setTimeout(function () { window.location = "Models.html" }, 800);
+    }
+    function linkGameplay() {
+        document.getElementsByClassName("card")[2].style.top = "-150%";
+        setTimeout(function () { window.location = "Gameplay.html" }, 800);
+    }
+    document.getElementsByClassName("card")[0].addEventListener("click", linkVisual, false);
+
+    document.getElementsByClassName("card")[1].addEventListener("click", linkModels, false);
+
+    document.getElementsByClassName("card")[2].addEventListener("click", linkGameplay, false);
+</script>

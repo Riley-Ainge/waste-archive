@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="css/site2.css">
+<!DOCTYPE html>
+<a href="javascirpt:void" id="menu-item" onclick="onBtnClickHandle()">Home</a>
+<a class="tinysubtitle"><span id="clickable" class="tinysubtitleLink">Home</span> > Model Archive</a>
+<a class="pagetitle">Model Archives</a>
+<div id="menu-background-image"></div>
+<div class="randomLineLonger"></div>
+<div class="archiveParent" id="pageCards">
+        <div class="card">
+            <a class="subsubtitle">Firearms & Explosives</a>
+            <a class="tinysubtitle">All present Firearms & Animations</a>
+        </div>
+        <div class="card">
+            <a class="subsubtitle">Melee</a>
+            <a class="tinysubtitle">All Melee weapons & Animations</a>
+        </div>
+        <div class="card">
+            <a class="subsubtitle">Medical & Vehicles</a>
+            <a class="tinysubtitle">All Medical Animations & Vehicles</a>
+        </div>
+</div>
+<div class="archiveParent" id="pageCards">
+    <div class="card">
+        <a class="subsubtitle">Ammo</a>
+        <a class="tinysubtitle">All Usable Ammunition Types</a>
+    </div>
+    <div class="card">
+        <a class="subsubtitle">Natural Buildings</a>
+        <a class="tinysubtitle">Page of all Static Objects</a>
+    </div>
+    <div class="card">
+        <a class="subsubtitle">Player Built Buildings</a>
+        <a class="tinysubtitle">All Dynamic Objects</a>
+    </div>
+</div>
+<script>
+    let clickableText = document.querySelector("#clickable");
+
+    clickableText.addEventListener("click", function () {
+
+        onBtnClickHandle();
+
+    });
+    var r = document.querySelector(':root');
+    r.style.setProperty('--g1', 'rgb(39 89 63)');
+    function onBtnClickHandle() {
+        document.getElementById("menu-background-image").style.backgroundPositionX = "110vw";
+        document.getElementById("menu-item").style.marginLeft = "110vw";
+        document.getElementsByClassName("pagetitle")[0].style.marginLeft = "110vw";
+        document.getElementsByClassName("RandomLineLonger")[0].style.marginLeft = "110vw";
+        document.getElementsByClassName("tinysubtitle")[0].style.marginLeft = "110vw";
+        document.getElementsByClassName("archiveParent")[0].style.marginLeft = "110vw";
+        setTimeout(function () { window.location = "Index.html" }, 800);
+    }
+
+    function linkFirearms() {
+        document.getElementsByClassName("card")[0].style.top = "-150%";
+        setTimeout(function () { window.location = "Models/Firearms.html" }, 800);
+    }
+    function linkMelee() {
+        document.getElementsByClassName("card")[1].style.top = "-150%";
+        setTimeout(function () { window.location = "Models/Melee.html" }, 800);
+    }
+    function linkMedical() {
+        document.getElementsByClassName("card")[2].style.top = "-150%";
+        setTimeout(function () { window.location = "Models/Medical.html" }, 800);
+    }
+    function linkAmmo() {
+        document.getElementsByClassName("card")[3].style.top = "-150%";
+        setTimeout(function () { window.location = "Models/Ammo.html" }, 800);
+    }
+    function linkBuildings() {
+        document.getElementsByClassName("card")[4].style.top = "-150%";
+        setTimeout(function () { window.location = "Models/Buildings.html" }, 800);
+    }
+    function linkDeployables() {
+        document.getElementsByClassName("card")[5].style.top = "-150%";
+        setTimeout(function () { window.location = "Models/Deployables.html" }, 800);
+    }
+    document.getElementsByClassName("card")[0].addEventListener("click", linkFirearms, false);
+
+    document.getElementsByClassName("card")[1].addEventListener("click", linkMelee, false);
+
+    document.getElementsByClassName("card")[2].addEventListener("click", linkMedical, false);
+
+    document.getElementsByClassName("card")[3].addEventListener("click", linkAmmo, false);
+
+    document.getElementsByClassName("card")[4].addEventListener("click", linkBuildings, false);
+
+    document.getElementsByClassName("card")[5].addEventListener("click", linkDeployables, false);
+</script>
